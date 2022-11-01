@@ -1,4 +1,4 @@
-function NavButton({ overlayState, setOverlayState }) {
+function NavButton({ overlayState, setOverlayState, setInfoPageContent }) {
     return (
         <button
             id="menu-button"
@@ -7,6 +7,7 @@ function NavButton({ overlayState, setOverlayState }) {
                 const menuCards = document.getElementsByClassName('menu-card');
 
                 if (overlayState === 'nav-menu') {
+                    setInfoPageContent(<div />);
                     wrapper.classList.remove('shifted-up');
                     for (const element of menuCards) {
                         element.classList.remove('zoom-in');

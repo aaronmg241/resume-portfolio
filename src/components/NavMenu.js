@@ -80,8 +80,8 @@ function NavMenu() {
                     />
                 </div>
             </div>
-            <div className="info-page">{infoPageContent} </div>
-            <NavButton overlayState={overlayState} setOverlayState={setOverlayState} />
+            <div className="info-page"> {infoPageContent} </div>
+            <NavButton overlayState={overlayState} setOverlayState={setOverlayState} setInfoPageContent={setInfoPageContent} />
         </>
     );
 }

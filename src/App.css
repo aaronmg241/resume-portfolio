@@ -204,10 +204,6 @@
 
 .info-page {
     height: 100vh;
-    height: -moz-available;
-    height: -webkit-fill-available;
-    height: stretch;
-
     width: 100vw;
 
     position: fixed;
