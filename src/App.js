@@ -8,8 +8,24 @@ import ResearchPaperImage from './images/research-paper.jpg';
 import Project from './components/Project';
 import NavMenu from './components/NavMenu';
 import LoadingPage from './components/LoadingPage';
+import { useEffect } from 'react';
+
+function calculateInnerHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+calculateInnerHeight();
 
 function App() {
+    useEffect(() => {
+        window.addEventListener('resize', calculateInnerHeight());
+
+        return () => {
+            window.removeEventListener('resize', calculateInnerHeight());
+        };
+    }, []);
+
     return (
         <div className="App">
             <LoadingPage />
