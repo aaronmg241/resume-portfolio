@@ -368,4 +368,8 @@
         opacity: 1;
         margin-top: 1vh;
     }
+
+    .shifted-up {
+        transform: translateY(calc(var(--menu-height) * -1 + 100px * -1));
+    }
 }
