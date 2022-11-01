@@ -5,6 +5,7 @@
     --menu-height: min(400px, 100vh);
     --text-color: rgb(255, 255, 255, 0.9);
     --button-color: #686de0;
+    --title-font-size: 64px;
 }
 
 .hide-scroll::-webkit-scrollbar {
@@ -48,7 +49,7 @@
 
 .title-word {
     font-family: 'Kanit', sans-serif;
-    font-size: 64px;
+    font-size: var(--title-font-size);
     color: var(--black-background);
     font-weight: bold;
     text-transform: uppercase;
@@ -307,20 +308,19 @@
     }
 
     25% {
-        transform: translateY(-64px);
+        transform: translateY(calc(var(--title-font-size) * -1));
     }
 
     50% {
-        transform: translateY(-128px);
+        transform: translateY(calc(var(--title-font-size) * -2));
     }
 
     75% {
-        transform: translateY(-192px);
+        transform: translateY(calc(var(--title-font-size) * -3));
     }
 
-    99%,
     100% {
-        transform: translateY(-256px);
+        transform: translateY(calc(var(--title-font-size) * -4));
     }
 }
 
@@ -362,6 +362,10 @@
 
     .scroll-column {
         height: fit-content;
+    }
+
+    :root {
+        --title-font-size: 32px;
     }
 }
 
