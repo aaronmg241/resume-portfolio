@@ -16,10 +16,6 @@
     margin: 0;
 }
 
-[hidden] {
-    display: none !important;
-}
-
 .hide-scroll::-webkit-scrollbar {
     display: none;
 }
@@ -299,11 +295,11 @@
 }
 
 @keyframes fade-out {
-    from {
+    0% {
         transform: translateY(0);
     }
 
-    to {
+    100% {
         transform: translateY(100vh);
         display: none !important;
         visibility: hidden !important;

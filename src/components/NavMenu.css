@@ -101,11 +101,12 @@
     .menu-swiper {
         overflow: scroll;
         width: 100vw;
+        padding-right: 0;
     }
 
     .menu-swiper::after {
         display: inline-block;
-        min-width: 100px;
+        min-width: 25px;
         content: '';
     }
 }
