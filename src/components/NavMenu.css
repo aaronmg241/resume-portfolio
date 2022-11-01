@@ -17,6 +17,8 @@
 
 .menu {
     position: absolute;
+    display: flex;
+    align-items: center;
     top: 100%;
     transform: translateY(-100%);
     width: 100vw;
@@ -31,7 +33,6 @@
     display: flex;
     flex-direction: row;
     padding-left: 50px;
-    margin-top: 50px;
     padding-right: 50px;
     transition: all 1s;
     perspective: 100px;
@@ -48,7 +49,6 @@
     transition: transform 1s cubic-bezier(0.45, 0.02, 0.09, 0.98);
     perspective: 100px;
     border: none;
-    outline: 2px solid red;
 }
 
 .menu-card:hover {
