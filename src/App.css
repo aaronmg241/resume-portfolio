@@ -2,10 +2,18 @@
     --faded-white: rgb(255, 255, 255, 0.9);
     --black-background: rgb(40, 40, 43);
     --beige-background: #f2efe6;
-    --menu-height: min(400px, 100vh);
+    --menu-height: min(400px, 90vh);
     --text-color: rgb(255, 255, 255, 0.9);
     --button-color: #686de0;
     --title-font-size: 64px;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 [hidden] {
@@ -33,7 +41,9 @@
     position: absolute;
     z-index: 20;
     width: 100vw;
+
     height: 100vh;
+
     background: #f2efe6;
     animation: fade-out 1s 3.5s forwards cubic-bezier(0.45, 0.02, 0.09, 0.98);
     overflow: hidden;
@@ -79,7 +89,9 @@
     position: relative;
     text-align: center;
     width: 100vw;
+
     height: 100vh;
+
     background: var(--black-background);
     display: flex;
     flex-direction: column;
@@ -199,6 +211,10 @@
 
 .info-page {
     height: 100vh;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: stretch;
+
     width: 100vw;
 
     position: fixed;
@@ -365,5 +381,12 @@
     .project > .project-description {
         opacity: 1;
         margin-top: 1vh;
+    }
+
+    .page-wrapper,
+    .loading-page {
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height: stretch;
     }
 }

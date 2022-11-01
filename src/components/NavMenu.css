@@ -70,7 +70,7 @@
     position: sticky;
     bottom: 0;
     left: 50vw;
-    transform: translate(-50%, -125%);
+    transform: translate(-50%, -150%);
     transition: all 1s;
 
     font-size: 1vw;
@@ -113,6 +113,8 @@
 
 @media (orientation: portrait) {
     #menu-button {
-        bottom: 50vh;
+        top: -moz-available;
+        top: -webkit-fill-available;
+        top: stretch;
     }
 }
