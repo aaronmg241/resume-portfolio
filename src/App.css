@@ -127,7 +127,6 @@
     align-items: center;
     width: 400px;
 
-    padding: none;
     color: var(--faded-white);
     transition: all 0.5s;
     position: relative;
@@ -144,8 +143,6 @@
 
 .project > .project-description {
     opacity: 0;
-    /* color: var(--faded-white); */
-    /* color: #a29bfe; */
     color: var(--text-color);
     font-family: 'Kanit', sans-serif;
     font-size: 16px;
@@ -259,16 +256,6 @@
     }
 }
 
-@keyframes load1 {
-    from {
-        margin-top: 10vh;
-    }
-
-    to {
-        margin-top: 0vh;
-    }
-}
-
 @keyframes slide-in {
     0% {
         transform: translateY(100px);
@@ -298,7 +285,7 @@
 
     to {
         transform: translateY(100vh);
-        display: none;
+        display: none !important;
     }
 }
 

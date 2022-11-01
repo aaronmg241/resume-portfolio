@@ -110,3 +110,9 @@
         content: '';
     }
 }
+
+@media (orientation: portrait) {
+    #menu-button {
+        bottom: 50vh;
+    }
+}
