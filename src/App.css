@@ -8,6 +8,10 @@
     --title-font-size: 64px;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 .hide-scroll::-webkit-scrollbar {
     display: none;
 }
@@ -286,6 +290,7 @@
     to {
         transform: translateY(100vh);
         display: none !important;
+        visibility: hidden !important;
     }
 }
 
