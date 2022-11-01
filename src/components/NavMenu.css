@@ -39,6 +39,8 @@
 
 .menu-card {
     display: flex;
+    height: fit-content;
+    width: fit-content;
     flex-direction: column;
     justify-content: flex-start;
     margin-right: 5vw;
