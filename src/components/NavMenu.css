@@ -28,13 +28,11 @@
 
 .menu-swiper {
     height: 300px;
-    width: fit-content;
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
     padding-left: 50px;
-    padding-right: 50px;
-    scroll-behavior: smooth;
+    margin-top: auto;
+    /* padding-right: 50px; */
     transition: all 1s;
     perspective: 100px;
 }
@@ -94,6 +92,13 @@
 @media screen and (max-width: 850px) {
     .card-image {
         height: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #menu-button {
+        height: 70px;
+        width: 70px;
     }
 }
 
