@@ -29,7 +29,6 @@
 .menu-swiper {
     height: 300px;
     width: fit-content;
-    justify-content: flex-start;
     display: flex;
     flex-direction: row;
     margin-top: 50px;
