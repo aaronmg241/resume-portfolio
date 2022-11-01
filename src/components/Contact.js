@@ -2,7 +2,7 @@ import React from 'react';
 
 function Contact() {
     return (
-        <div style={{ padding: 20, border: '3px solid rgb(40, 40, 43)' }}>
+        <div style={{ padding: 20 }}>
             <div
                 style={{
                     fontWeight: 'bold',
