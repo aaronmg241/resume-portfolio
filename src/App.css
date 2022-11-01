@@ -2,7 +2,7 @@
     --faded-white: rgb(255, 255, 255, 0.9);
     --black-background: rgb(40, 40, 43);
     --beige-background: #f2efe6;
-    --menu-height: min(400px, 90vh);
+    --menu-height: min(400px, 100vh);
     --text-color: rgb(255, 255, 255, 0.9);
     --button-color: #686de0;
     --title-font-size: 64px;

@@ -107,7 +107,6 @@
 
 @media (pointer: none), (pointer: coarse) {
     .menu-swiper {
-        outline: 2px solid red;
         overflow: scroll;
         width: 100vw;
         padding-right: 0;
