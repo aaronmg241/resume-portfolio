@@ -11,7 +11,9 @@ import LoadingPage from './components/LoadingPage';
 import { useEffect } from 'react';
 
 function calculateInnerHeight() {
+    console.log('here');
     let vh = window.innerHeight * 0.01;
+    console.log({ vh });
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
@@ -19,10 +21,10 @@ calculateInnerHeight();
 
 function App() {
     useEffect(() => {
-        window.addEventListener('resize', calculateInnerHeight());
+        window.addEventListener('resize', calculateInnerHeight);
 
         return () => {
-            window.removeEventListener('resize', calculateInnerHeight());
+            window.removeEventListener('resize', calculateInnerHeight);
         };
     }, []);
 
