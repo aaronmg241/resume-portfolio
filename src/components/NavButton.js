@@ -1,4 +1,9 @@
-function NavButton({ overlayState, setOverlayState, setInfoPageContent }) {
+import { useContext } from 'react';
+import { OverlayContext } from '../context/OverlayContext';
+
+function NavButton() {
+    const { overlayState, setOverlayState, setInfoPageContent } = useContext(OverlayContext);
+
     return (
         <button
             id="menu-button"
@@ -21,7 +26,8 @@ function NavButton({ overlayState, setOverlayState, setInfoPageContent }) {
                     setOverlayState('nav-menu');
                 } else if (overlayState === 'info-page') {
                     document.getElementsByClassName('info-page')[0].classList.remove('info-page-visible');
-                    setOverlayState('nav-menu');
+                    if (wrapper.classList.contains('shifted-up')) setOverlayState('nav-menu');
+                    else setOverlayState('none');
                 }
             }}
         >

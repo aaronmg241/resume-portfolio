@@ -9,7 +9,8 @@ import Contact from './Contact';
 import About from './About';
 
 import './NavMenu.css';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { OverlayContext } from '../context/OverlayContext';
 
 const handleScroll = (e) => {
     if (e.movementX === 0 && e.movementY === 0) return; // Disable this if clicking on a mobile device
@@ -34,8 +35,7 @@ const handleScroll = (e) => {
 };
 
 function NavMenu() {
-    const [infoPageContent, setInfoPageContent] = useState(<div />);
-    const [overlayState, setOverlayState] = useState('none');
+    const { infoPageContent, showInfoPage } = useContext(OverlayContext);
 
     return (
         <>
@@ -45,9 +45,7 @@ function NavMenu() {
                         label="CV"
                         img={ResumeImage}
                         onClick={() => {
-                            document.getElementsByClassName('info-page')[0].classList.add('info-page-visible');
-                            setInfoPageContent(<div> Coming soon! </div>);
-                            setOverlayState('info-page');
+                            showInfoPage(<div> Coming soon! </div>);
                         }}
                     />
 
@@ -62,9 +60,7 @@ function NavMenu() {
                     <NavCard
                         label="Contact"
                         onClick={() => {
-                            document.getElementsByClassName('info-page')[0].classList.add('info-page-visible');
-                            setInfoPageContent(<Contact />);
-                            setOverlayState('info-page');
+                            showInfoPage(<Contact />);
                         }}
                         img={ContactImage}
                     />
@@ -72,16 +68,14 @@ function NavMenu() {
                     <NavCard
                         label="About Me"
                         onClick={() => {
-                            document.getElementsByClassName('info-page')[0].classList.add('info-page-visible');
-                            setInfoPageContent(<About />);
-                            setOverlayState('info-page');
+                            showInfoPage(<About />);
                         }}
                         img={AaronImage}
                     />
                 </ul>
             </nav>
             <div className="info-page"> {infoPageContent} </div>
-            <NavButton overlayState={overlayState} setOverlayState={setOverlayState} setInfoPageContent={setInfoPageContent} />
+            <NavButton />
         </>
     );
 }
