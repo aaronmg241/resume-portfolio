@@ -364,6 +364,12 @@
     }
 }
 
+@media screen and (max-height: 500px) {
+    :root {
+        --title-font-size: 32px;
+    }
+}
+
 @media (pointer: none), (pointer: coarse) {
     .project > .project-description {
         opacity: 1;

@@ -10,21 +10,29 @@ import NavMenu from './components/NavMenu';
 import LoadingPage from './components/LoadingPage';
 import { useEffect } from 'react';
 
+function resizeListenerFunction() {
+    calculateInnerHeight();
+    resetMenuScrollerPosition();
+}
+
 function calculateInnerHeight() {
-    console.log('here');
     let vh = window.innerHeight * 0.01;
-    console.log({ vh });
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+function resetMenuScrollerPosition() {
+    const swiper = document.getElementsByClassName('menu-swiper')[0];
+    swiper.style.transform = 'translateX(0)';
 }
 
 calculateInnerHeight();
 
 function App() {
     useEffect(() => {
-        window.addEventListener('resize', calculateInnerHeight);
+        window.addEventListener('resize', resizeListenerFunction);
 
         return () => {
-            window.removeEventListener('resize', calculateInnerHeight);
+            window.removeEventListener('resize', resizeListenerFunction);
         };
     }, []);
 
