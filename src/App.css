@@ -189,6 +189,7 @@
 
 .item-label {
     position: relative;
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
     color: rgb(40, 40, 43);

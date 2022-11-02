@@ -6,7 +6,7 @@ function Contact() {
             <div
                 style={{
                     fontWeight: 'bold',
-                    fontSize: 24,
+                    fontSize: 'min(24px, 5vw)',
                     marginBottom: '5vh'
                 }}
             >
@@ -16,7 +16,7 @@ function Contact() {
             <div
                 style={{
                     fontWeight: 'bold',
-                    fontSize: 24
+                    fontSize: 'min(24px, 5vw)'
                 }}
             >
                 Phone: <span style={{ color: '#686de0', marginLeft: 10 }}> 519-573-0097 </span>

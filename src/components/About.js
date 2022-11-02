@@ -6,7 +6,7 @@ function About() {
                 Mathematics. I started learning React/Javascript, HTML, and CSS during my last semester, about a year ago, when I started developing the BTRHire
                 web applications.
             </p>
-
+            <br />
             <p>
                 During school, I never really found a passion for programming. Some assignments were interesting, such as building a bot to play tic-tac-toe
                 against, but it never lead to programming outside of school. The problem solving component of Computer Science was always what most intrigued
@@ -15,21 +15,21 @@ function About() {
                 schema, designing an efficient and good looking UI, and developing with more freedom. This is when I thought, "Hey, maybe I really do enjoy
                 programming after all."
             </p>
-
+            <br />
             <p>
                 Once I finished school and had more free time, I feel that my learning really picked up. I started developing some personal projects and really
                 got deep into the BTR projects. I continue to work with BTR and develop those projects part time. I also started to design small websites, such
                 as the one for Grindstone Recruiting. You can see most of my projects on the main page of this website. I have yet to finish some and always
                 have side projects on my mind!
             </p>
-
+            <br />
             <hr />
-
             <p>
                 Outside of programming, I have a passion for a variety of things that keep me active and keep me entertained while doing it. Currently, that
                 seems to be running, but in the past it has been rock climbing, hiking, and basketball at various times. I also love video games, and plan to
                 play around with learning some game development in the future.
             </p>
+            <br />
         </div>
     );
 }
