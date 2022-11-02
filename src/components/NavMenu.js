@@ -39,8 +39,8 @@ function NavMenu() {
 
     return (
         <>
-            <div className="menu" onMouseMove={handleScroll}>
-                <div className="menu-swiper hide-scroll">
+            <nav className="menu" onMouseMove={handleScroll}>
+                <ul className="menu-swiper hide-scroll">
                     <NavCard
                         label="CV"
                         img={ResumeImage}
@@ -78,8 +78,8 @@ function NavMenu() {
                         }}
                         img={AaronImage}
                     />
-                </div>
-            </div>
+                </ul>
+            </nav>
             <div className="info-page"> {infoPageContent} </div>
             <NavButton overlayState={overlayState} setOverlayState={setOverlayState} setInfoPageContent={setInfoPageContent} />
         </>
