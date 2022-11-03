@@ -7,6 +7,7 @@ import BTRWebsiteScreenshot from '../images/BTRWebsiteScreenshot.jpg';
 import BTRClientScreenshot from '../images/BTRClientScreenshot.jpg';
 import ResearchPaperImage from '../images/research-paper.jpg';
 import URAResearchPaperImage from '../images/URA-research-paper.jpg';
+import GrindstoneWebsiteImage from '../images/GrindstoneWebsite.jpg';
 
 import Project from './Project';
 
@@ -45,6 +46,15 @@ function ProjectScroller() {
                         window.open('https://arxiv.org/pdf/2108.09363.pdf');
                     }}
                 />
+
+                <Project
+                    label="Research Paper"
+                    img={ResearchPaperImage}
+                    description="Journal version and extension of work done during my URA. This version was completed during the last semester of my undergraduate."
+                    onClick={() => {
+                        window.open('https://arxiv.org/pdf/2202.01746.pdf');
+                    }}
+                />
             </div>
 
             <div className="scroll-column">
@@ -76,11 +86,11 @@ function ProjectScroller() {
                 />
 
                 <Project
-                    label="Research Paper"
-                    img={ResearchPaperImage}
-                    description="Journal version and extension of work done during my URA. This version was completed during the last semester of my undergraduate."
+                    label="Professional Project"
+                    img={GrindstoneWebsiteImage}
+                    description="Business website created for Grindstone Recruiting."
                     onClick={() => {
-                        window.open('https://arxiv.org/pdf/2202.01746.pdf');
+                        showInfoPage(<div> More information coming soon. </div>);
                     }}
                 />
             </div>
