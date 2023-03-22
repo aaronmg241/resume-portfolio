@@ -11,6 +11,7 @@ import About from './About';
 import './NavMenu.css';
 import { useContext } from 'react';
 import { OverlayContext } from '../context/OverlayContext';
+import CV from './CV/CV';
 
 const handleScroll = (e) => {
     if (e.movementX === 0 && e.movementY === 0) return; // Disable this if clicking on a mobile device
@@ -45,7 +46,7 @@ function NavMenu() {
                         label="CV"
                         img={ResumeImage}
                         onClick={() => {
-                            showInfoPage(<div> Coming soon! </div>);
+                            showInfoPage(<CV />);
                         }}
                     />
 
